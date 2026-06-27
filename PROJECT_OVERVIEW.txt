@@ -292,25 +292,25 @@ After analyzing an API URL, DevFlow renders 6 tabs:
   9. DEPLOYMENT READINESS
 --------------------------------------------------------------------------------
 
-  Status: ~85% ready for deployment
+  Status: ~95% ready for deployment
 
   ✅ Clean architecture — logic separated from UI
   ✅ Proper requirements.txt with pinned minimum versions
   ✅ @st.cache_data with TTL for performance
   ✅ Graceful error handling (timeouts, bad JSON, missing API key)
   ✅ Session state managed cleanly
+  ✅ Added .gitignore (excluding .env, venv/, etc.)
+  ✅ Added runtime.txt (specifying python-3.12.3)
 
-  ⚠ BLOCKERS before deploying:
-    1. Add .gitignore — exclude .env, venv/, .venv/, __pycache__/
-    2. Move secrets to platform environment variables (Streamlit Cloud Secrets)
+  ⚠ REMAINING STEPS before deploying:
+    1. Move secrets to platform environment variables (Streamlit Cloud Secrets)
        DO NOT hardcode or commit API keys
-    3. Add runtime.txt to specify Python version for Streamlit Cloud
 
   ⚠ MINOR ISSUES:
-    4. GEMINI_API_KEY in .env is unused in Python code
-    5. index.html / workflow.html are standalone static files not integrated
+    2. GEMINI_API_KEY in .env is unused in Python code
+    3. index.html / workflow.html are standalone static files not integrated
        into the Streamlit app — clarify their role
-    6. session.py and components/ directory appear to be an earlier version
+    4. session.py and components/ directory appear to be an earlier version
        of the component architecture — not all are actively imported in app.py
 
   Recommended platform: Streamlit Community Cloud (https://streamlit.io/cloud)
