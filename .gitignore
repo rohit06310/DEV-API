@@ -1,0 +1,10 @@
+.env
+venv/
+.venv/
+__pycache__/
+*.pyc
+.streamlit/
+*.csv
+outputs/
+dist/
+node_modules/
